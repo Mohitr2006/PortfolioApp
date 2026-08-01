@@ -1,0 +1,155 @@
+.about{
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.about-container{
+    width: min(1100px, 90%);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.section-tag{
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.about h1{
+    font-size: 64px;
+    line-height: 1.15;
+    margin-bottom: 30px;
+    color: var(--text);
+}
+
+.about h1 span{
+    color: var(--primary);
+}
+
+.intro{
+    max-width: 760px;
+    margin: auto;
+    font-size: 19px;
+    line-height: 1.9;
+    color: var(--text-light);
+}
+
+.skills{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.skills span{
+    padding: 14px 26px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.4);
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    transition: .35s ease;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.skills span:hover{
+    background: var(--primary);
+    color: white;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(108,99,255,.25);
+}
+
+
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .18;
+    animation: float 8s ease-in-out infinite;
+    z-index: -1;
+}
+
+.blob1{
+    width: 420px;
+    height: 420px;
+    background: #6C63FF;
+    top: -180px;
+    right: -120px;
+}
+
+.blob2{
+    width: 350px;
+    height: 350px;
+    background: #00C2FF;
+    bottom: -120px;
+    left: -120px;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(40px);
+    }
+
+}
+
+
+.hidden{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width:900px){
+
+    .about{
+        padding: 90px 0;
+    }
+
+    .about h1{
+        font-size: 48px;
+    }
+
+    .intro{
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .about h1{
+        font-size: 36px;
+    }
+
+    .intro{
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .skills{
+        gap: 12px;
+    }
+
+    .skills span{
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+}

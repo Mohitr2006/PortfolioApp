@@ -1,0 +1,152 @@
+.projects{
+    width:100%;
+    min-height:100vh;
+    padding:120px 8% 80px;
+    background:#f5f7ff;
+}
+
+.projects-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-tag{
+    color:#6c63ff;
+    font-size:.9rem;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.projects-header h1{
+    font-size:3rem;
+    color:#222;
+}
+
+
+.project-card{
+    max-width:1000px;
+    margin:0 auto 40px;
+    padding:35px;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.project-content h2{
+    font-size:2rem;
+    color:#222;
+    margin-bottom:18px;
+}
+
+.project-content p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.tech-stack span{
+    background:#eef0ff;
+    color:#6c63ff;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+
+.project-links{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn,
+.github-btn{
+    display:inline-block;
+    padding:12px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn{
+    background:#6c63ff;
+    color:#fff;
+}
+
+.btn:hover{
+    background:#5848ff;
+}
+
+.github-btn{
+    background:#24292f;
+    color:#fff;
+}
+
+.github-btn:hover{
+    background:#000;
+}
+
+
+.coming-soon{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:10px;
+    background:#ececec;
+    color:#555;
+    font-weight:600;
+}
+
+
+@media(max-width:768px){
+
+    .projects{
+        padding:100px 6% 60px;
+    }
+
+    .projects-header h1{
+        font-size:2.2rem;
+    }
+
+    .project-card{
+        padding:25px;
+    }
+
+    .project-content h2{
+        font-size:1.6rem;
+    }
+
+    .project-links{
+        flex-direction:column;
+    }
+
+    .btn,
+    .github-btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}

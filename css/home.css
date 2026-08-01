@@ -1,0 +1,234 @@
+.hero{
+
+    position:relative;
+
+    min-height:calc(100vh - 85px);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background-image:url("../images/hero-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.93) 0%,
+        rgba(255,255,255,.75) 35%,
+        rgba(255,255,255,.35) 65%,
+        rgba(255,255,255,.08) 100%
+    );
+
+}
+
+.hero-content{
+
+    width:min(1200px,90%);
+
+    position:relative;
+
+    z-index:2;
+
+    animation:slideLeft .9s ease;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    max-width:700px;
+
+    color:var(--text);
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero p{
+
+    margin-top:30px;
+
+    max-width:580px;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#444;
+
+}
+
+.buttons{
+
+    margin-top:50px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+@keyframes slideLeft{
+
+from{
+
+opacity:0;
+
+transform:translateX(-70px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+right:-120px;
+
+top:-120px;
+
+background:#6C63FF;
+
+opacity:.15;
+
+filter:blur(170px);
+
+border-radius:50%;
+
+animation:float 8s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(40px);
+
+}
+
+}
+
+@media(max-width:992px){
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-content{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+
+padding:70px 0;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.buttons a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
