@@ -259,34 +259,24 @@ footer{
 }
 
 
-@media(max-width:992px){
-
-    .nav-links{
-
-        gap:22px;
-
-    }
-
-}
-
 @media(max-width:768px){
 
     .navbar{
-
-        height:75px;
-
+        height:auto;
+        padding:15px 0;
+        flex-direction:column;
+        gap:15px;
     }
 
     .nav-links{
-
-        display:none;
-
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
     }
 
     .logo h2{
-
         font-size:20px;
-
     }
 
 }
