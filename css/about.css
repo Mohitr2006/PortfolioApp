@@ -1,7 +1,14 @@
 .about{
     position: relative;
     overflow: hidden;
-    padding: 120px 0;
+
+    min-height: calc(100vh - 85px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding: 60px 20px;
 }
 
 .about-container{
@@ -119,7 +126,7 @@
 @media (max-width:900px){
 
     .about{
-        padding: 90px 0;
+        padding: 90px 20px;
     }
 
     .about h1{
